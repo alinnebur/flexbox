@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- Ann Linnebur July 5, 2020 -->
+<html>
+<head>
+	<title>Flexbox: Layout Hero</title>
+	<link href="flexbox2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+
+<!-- <div id="w">
+    <div id="content">
+      <nav id="stickynav">
+        <ul id="nav" class="clearfix"> -->
+
+    <nav class="stickynav">
+    	<div class="dropdown">
+    	<div class="dropdown-label">Menu</div>
+    	<div class="dropdown-menu">
+    	<ul id="nav" class="site-nav">   	
+          <li><a href="#navigation">Navigation</a></li>
+          <li><a href="#vertical">Vertical Centering</a></li>
+          <li><a href="#alignment">Alignment</a></li>
+          <li><a href="#order">Order</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+    </nav>	 
+
+
+
+
+
+
+
+<h1>Flexbox: Layout Hero</h1>
+
+
+
+
+<div id="introduction">
+<section id="introduction" class="introduction">
+<h2>Why use Flexbox</h2>
+
+<div class="tile">Flex box enhances our ability as designers and coders to be more responsive.  Which means that we are able to write for different break points without needing extra code for media queries.</div> 
+
+<img src="flexboxelement.png" alt="flexbox diagram">
+
+<div class="row"><div class="columns">A Flexbox layout consists of a flex container or box that holds the flex items. The flex container can be laid out horizontally or vertically. This is referred to as the main axis.</div>
+
+<div class="columns">The children (all the elements that are within the flex container) are laid out along the main axis. These children can flex or change their sizes, growing to fill unused space in the container, or shrinking to avoid overflowing.  By nesting multiple flex containers with different orientations, you can achieve complex layouts.  take a look at the following code.</div></div>
+
+<div class="tile"><img src="flexbox.png" alt="flexbox code">
+
+<p class="bold">That one line of code does all the following:</p>
+
+<ul>
+	<li>Treats .flex-container as a flex container.</li>
+	<li>Treats all direct children of .flex-container as flex items.</li>
+	<li>Flex items will be laid out in a horizontal line.</li>
+	<li>Flex items will be laid out in source order.</li>
+	<li>Flex items will be laid out starting from the left side of the flex container.</li>
+	<li>Flex items will be sized based on their regular widthproperties.</li>
+	<li>If there is not enough space for all the flex items, they will be allowed to shrink horizontally until they all fit.</li>
+	<li>If they need to shrink, each item will shrink equally.</li>
+	<li>Flex items will all stretch vertically to match the height of the tallest flex item.</li>
+</ul>	
+<p>It is amazing that one line of code can offer the browser so much information.  And there is so much more we can do with other properties of flexbox.</p></div>
+
+<p>I would like to show you some Flexbox examples.  Navigation is always a tricky part of any design and Flexbox can help.  Alignment of elements can become sticky but Flexbox can help.  Centering an element vertically was scary before Flexbox but can be done easily now.  Change your mind on the order you want elements to follow -no problem- now you have Flexbox!</p>
+</section>
+</div>
+
+<button><a href="#introduction">Back to top</a></button>
+
+<div id="navigation">
+<section id="navigation" class="navigation">
+<h2>Navigation</h2>
+<img src="navigation.png" alt="flexbox navigation menu">
+
+<div class="row"><div class="columns"><p>Flexbox is a versatile layout module with which we can use to create one-dimensional layouts that require flexibility, such as responsive menus. Using flexbox ordering, alignment, and sizing properties, we can build navigation bars that adapt their layouts to the viewport size while keeping the HTML outline logical and accessible.</p></div>
+
+<div class="columns"><p>How to create a responsive navigation bar with flexbox. Flexbox navigation can have three different layouts, depending on the viewport size:</p></div></div>
+
+<ol>
+
+<li> A mobile layout in which only the logo and a toggle button will be visible by default and users can open and close the menu using the toggle.
+</li>
+
+<li>As a tablet layout in which we will show two call-to-action buttons between the logo and toggle in the default state and the rest of the menu will remain toggleable.
+</li>
+
+<li>As a desktop layout in which all the menu items, except for the toggle button, will be visible on the screen.
+</li>
+</ol>
+</section>
+</div>
+
+<button><a href="#introduction">Back to top</a></button>
+
+<section id="vertical" class="vertical">
+<h2>Vertical Centering</h2>
+<img src="vertical.png" alt="vertical diagram">
+
+<div class="row"><div class="columns">Flexbox does not use the concepts of horizontal and vertical centering. It works with main and cross axes which can look like horizontal and vertical centering. The direction of the main and cross axes depends on the value of the flex-direction property.</div>
+<div class="columns">In row-based flexbox layouts the main axis runs in a horizontal direction, while the cross axis is vertical. In column-based flexbox layouts the main axis runs vertically, while the cross axis is horizontal. </div></div>
+<p>There are two kinds of centering:</p>
+<ol>
+<li> Centering along the main axis or -block axis.</li>
+ <li>Centering along the cross axis or -inline axis.</li>
+</ol>
+<p>If you want an element that is perfectly centered on the screen, you need to use the justify-content property to center the flex items along the main axis. The default value is flex-start which aligns all the items inside the flex container to the beginning of the main axis.</p>
+</section>
+
+<button><a href="#introduction">Back to top</a></button>
+
+<div id="alignment">
+<section id="alignment" class="alignment">
+<h2>Alignment</h2>
+<img src="alignment.png" alt="alignment diagram">
+
+<div class="tile">Remember that in HTML all of your elements are treated as boxes.  Navigation for example is a box. Yes, your menu is a box and inside that box are your links that are also boxes.  It is theses HTML boxes that CSS works to style. The alignment of your content is also adjustable.</div>
+
+<div class="row"><div class="columns">Because, flexbox is a one-dimensional layout, the cross axis has a secondary role. Flex items flow along the main axis. The cross axis does not change the direction of the flow, just adjusts the items on the screen.</div></div>
+<p> There are three CSS properties you can use for centering along the cross axis:</p>
+
+<ul>
+ <li>align-items for single-line centering of all the flex items.</li>
+ <li>align-self for single-line centering of an individual flex item.</li>
+ <li>align-content for multi-line centering of all the flex items (this property only works when flex items wrap into multiple lines).</li>
+</ul>
+<p>You can use the align-items property to align items along the cross axis. If you use it together with the center property, it centers items vertically when flex-direction is row or row-reverse, and horizontally when flex-direction is column or column-reverse.</p>
+</section>
+
+<button><a href="#introduction">Back to top</a></button>
+
+
+<section id="order" class="order">
+<h2>Order</h2>
+<img src="order.png" alt="flexbox order diagram">
+
+<div class="row"><div class="columns">In addition to reversing the order in which flex items are visually displayed, you can target individual items and change where they appear in the visual order with the order property.</div>
+<div class="columns">The order property is designed to lay the items out in ordinal groups. What this means is that items are assigned an integer that represents their group. The items are then placed in the visual order according to that integer, lowest values first. If more than one item has the same integer value, then within that group the items are laid out as per source order.</div>
+
+
+<div class="columns">If your items were links or some other element that the user could tab to, then the tabbing order would be the order that these items appear in the document source. <emphasis>Not your visual order</emphasis>.</div>
+
+<div class="columns">If you are using a reverse value, or otherwise reordering your items, you should consider whether you actually need to change the logical order in the source. The specification continues with a warning not to use reordering to fix issues in your source.</div></div>
+<div class="tile">Authors must not use order values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.</div>
+
+<div class="row"><div class="columns">Flex items have a default order value of 0, therefore items with an integer value greater than 0 will be displayed after any items that have not been given an explicit order value.</div>
+<div class="columns">You can also use negative values with order, which can be quite useful. If you want to make one item display first, and leave the order of all other items unchanged, you can give that item an order of -1. As this is lower than 0 the item will always be displayed first.</div>
+
+<div class="columns">Use of the order property has exactly the same implications for accessibility as changing the direction with flex-direction. Using order changes the order in which items are painted, and the order in which they appear visually. It does not change the sequential navigation order of the items. So if a user is tabbing between the items, they could find themselves jumping around your layout in a very confusing way.</div>
+
+
+</section>
+
+
+
+</div>
+<button><a href="#introduction">Back to top</a></button>
+
+
+
+<footer>
+  <div>
+
+    <ul>
+
+          <li><a href="https://www.uxpin.com/studio/blog/a-hands-on-guide-to-mobile-first-design/">A hands on guide to mobile first responsive design</a></li>
+
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Flex box layout</a></li>
+         
+
+          <li><a href="https://www.ostraining.com/blog/webdesign/css-flexbox-7-the-order-property/">Flexbox order property</a></li>
+         
+
+          <li><a href="https://freshman.tech/flexbox-navbar/">Flexbox navbar</a></li>
+         
+
+          <li><a href="https://coder-coder.com/responsive-navigation-bar-flexbox-vs-css-grid/">How to build a responsive navigation bar</a></li>
+        
+
+          <li><a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535">
+How to build a responsive navigation bar with flexbox</a></li>
+         
+
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">Justify-content</a></li>
+         
+
+          <li><a href="https://www.manning.com/books/css-in-depth?query=css#toc">Manning Publications</a></li>
+
+          <li><a href="https://www.sublimetext.com">Sublime text</a></li>
+          
+          <li><a href="https://www.invisionapp.com/inside-design/mobile-first-design/">What does mobile first mean for digital designers</a></li>
+
+          <li><a href="https://onextrapixel.com/flexbox-centering-guide/#:~:text=There%20are%20multiple%20use%20cases%20when%20it%20can,with%20just%20a%20few%20lines%20of%20CSS%20code.">Ultimate guide to flexbox centering</a></li>
+         </ul>
+  </div>
+</footer> 
+</body> 
+</html>

@@ -1,0 +1,208 @@
+
+/*Ann Linnebur July 12, 2020*/
+
+
+
+/*Rulesets should only ever inherit and add to previous ones, never undo.- Harry Roberts*/
+.nav {
+	border:solid;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+h1 {
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+/*Make the body 80%, brown and Montserrat 16pt font*/
+body {
+	max-width: 80%;
+	color: #6e470c;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+}
+
+/*images set to 80% of screen size*/
+img {
+	max-width: 80%;
+	box-shadow: 2px 2px 4px #6e470c;
+	border-radius: 5px;
+}
+
+.tile {
+	text-align: center;
+	font-size: larger;
+	padding: 1rem; 
+	margin: 2rem;
+	background-color: rgba(240, 112, 83, 0.2);
+}
+
+.bold {
+	font-size: 24px;
+
+}
+
+button a {
+	
+	color: white;
+  text-decoration: none;
+}
+
+button {
+  background-color: #e652a2;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+ .columns {
+  display: grid;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  flex-wrap: wrap;
+   padding: 1rem;
+    grid-template-rows: auto;
+  grid-gap: .5rem;
+  margin: .5rem 0;
+  min-width: 300px;  
+}
+
+
+/*NAVIGATION*/
+ 
+.site-nav {
+  /*display: flex;*/
+  padding: 0.5em;
+  margin: 0;
+  list-style-type: none;
+  border: 1px solid #999;
+  background-color: #e652a2;
+}
+
+.site-nav > li + li {
+  border-top: 1px solid #999;
+}
+
+.site-nav > li > a {
+  display: block;
+  padding: .5em 1.5em;
+  background-color: #ea85e9;
+  color: white;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.site-nav > li > a:hover {
+  background-color: #e652a2;
+}  
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-label {
+  padding: .5em 1.5em;
+  border: 1px solid #ccc;
+  background-color: #e652a2;
+  color: white;
+  text-transform: lowercase;
+  border-radius: 5px;
+  }
+
+.dropdown-menu {
+  display: none;                    
+  position: absolute;
+  left: 0;                           
+  top: 2.1em;                        
+  min-width: 100%;
+  
+}
+.dropdown:hover .dropdown-menu {    
+  display: inline-block; 
+
+}   
+
+
+
+
+
+
+
+
+/*/*Sticky Navigation*/
+ /*
+.stickynav {
+  display: flex;
+  height: 35px;
+ padding-left: 0;
+  max-width: 80%;
+  z-index: 9999;
+}
+ 
+.stickynav #nav { 
+  position: fixed; z-index: 9999; 
+}
+.stickynav #nav li { 
+  display: block;
+  margin-top: 0; 
+}
+.stickynav #nav li a {
+  display: block;
+  margin-right: 8px;
+  font-size: 1.2em;
+  padding: .5em 1em;
+  background-color: #e652a2;
+  color: #ffffff;
+  list-style-type: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+ border-radius: .2em;
+}
+.stickynav #nav li a:hover { 
+  text-decoration: none;
+  background: #ea85e9;
+}*/
+
+
+                          
+
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+
+/*For larger screens*/
+@media only screen and (min-width: 600px) {
+
+
+
+
+}
+
+
+
+
+
